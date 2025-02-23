@@ -4,8 +4,9 @@ import {
   Feed,
   SearchFeed,
   VideoDetail,
-  ChannelDetaail,
+  ChannelDetail,
   Navbar,
+  NotFound,
 } from "./components";
 const App = () => (
   <BrowserRouter>
@@ -14,8 +15,9 @@ const App = () => (
       <Routes>
         <Route path="/" exact element={<Feed />} />
         <Route path="/video/:id" element={<VideoDetail />} />
-        <Route path="/channel/:id" element={<ChannelDetaail />} />
+        <Route path="/channel/:id" element={<ChannelDetail />} />
         <Route path="/search/:searchTerm" element={<SearchFeed />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Box>
   </BrowserRouter>
